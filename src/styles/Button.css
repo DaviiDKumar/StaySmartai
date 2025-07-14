@@ -1,0 +1,14 @@
+.card-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-family: 'Passero One', sans-serif;
+    border-radius: 3;
+}
+
+.card-btn:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-light);
+    cursor: pointer;
+}

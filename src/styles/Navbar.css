@@ -1,0 +1,253 @@
+/* styles/Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: transparent;
+    /* Black background for Navbar */
+    color: var(--color-text-light);
+    /* Light text (white) */
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1000;
+    max-width: 95vw;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    border-radius: .6rem;
+
+}
+
+.navbar-title {
+
+    font-size: var(--font-size-h3);
+    color: var(--color-text-light);
+    /* Light white title */
+    margin-right: var(--spacing-lg);
+    white-space: nowrap;
+    font-family: 'Alegreya SC', serif;
+}
+
+/* Desktop Navigation Links */
+.navbar-links-desktop {
+    display: flex;
+    /* Always flex for desktop */
+    gap: var(--spacing-sm);
+}
+
+.navbar-link {
+    font-family: 'Passero One', sans-serif;
+    font-size: var(--font-size-p);
+    color: var(--color-text-light);
+    /* Light white links on black navbar */
+
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--spacing-xs);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+    background-color: var(--color-accent);
+    /* Use the very light grey accent for hover background */
+    color: var(--color-text-primary);
+    /* Use the near-black text color for hover text */
+    text-decoration: none;
+    outline: none;
+    transform: translateY(-2px);
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+}
+
+/* Hamburger Icon Styling */
+.hamburger-menu-button {
+    display: none;
+    /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    color: var(--color-text-light);
+    /* Hamburger icon color (white) */
+    transition: transform 0.2s ease;
+    z-index: 1001;
+    /* Ensure it's clickable and on top */
+}
+
+.hamburger-menu-button:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    /* Full width overlay */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black overlay */
+    backdrop-filter: blur(5px);
+    /* Optional: blur background content */
+    z-index: 999;
+    /* Below the navbar itself but above page content */
+    display: flex;
+    justify-content: flex-end;
+    /* Align content to the right */
+    visibility: hidden;
+    /* Hidden by default */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Fade in/out */
+}
+
+.mobile-menu-overlay.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Mobile Menu Content (the actual sliding panel) */
+.mobile-menu-content {
+    background-color: var(--color-bg);
+    /* Black background for the sliding panel */
+    width: 80%;
+    /* Takes 80% of screen width on mobile */
+    max-width: 300px;
+    /* Max width for larger tablets/portrait desktop */
+    height: 100%;
+    padding: var(--spacing-md);
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    /* Start off-screen to the right */
+    transition: transform 0.3s ease-out;
+    /* Slide in/out animation */
+    display: flex;
+    flex-direction: column;
+    color: var(--color-accent);
+
+}
+
+.mobile-menu-overlay.open .mobile-menu-content {
+    transform: translateX(0);
+    /* Slide into view */
+}
+
+/* Close button inside mobile menu */
+.close-menu-button {
+    background: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    color: var(--color-accent);
+    /* White color for the cross icon */
+    align-self: flex-end;
+    /* Push to the top right */
+    margin-bottom: var(--spacing-lg);
+    transition: transform 0.2s ease;
+    display: none;
+    /* <<<< Hidden by default on desktop, and hidden until menu is open */
+    border: 2px solid var(--color-accent);
+    border-radius: 5px;
+}
+
+/* Show close button only when mobile menu overlay is open */
+.mobile-menu-overlay.open .close-menu-button {
+    display: block;
+    /* Show when menu is open */
+}
+
+.close-menu-button:hover {
+    transform: scale(1.1);
+    /* Rotate and slight scale on hover */
+}
+
+/* Mobile Navigation Links inside the slide-in menu */
+.mobile-navbar-links {
+    display: flex;
+    flex-direction: column;
+    /* Stack links vertically */
+    gap: var(--spacing-md);
+    /* Space between stacked links */
+
+
+
+}
+
+/* Apply base styling for links within the mobile menu, overriding specific desktop styles */
+.mobile-navbar-links .navbar-link {
+    display: flex;
+
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-accent);
+    /* White text for links inside black mobile menu */
+    text-align: right;
+    /* Align links to the left in the list */
+    width: 100%;
+    /* Full width for clickable area */
+    padding: var(--spacing-md);
+    /* Larger padding for easier tapping */
+    box-shadow: 2px 4px 3px rgb(64, 134, 196);
+}
+
+.mobile-navbar-links span {
+    margin-bottom: 0;
+    margin-left: 1rem;
+    font-size: var(--font-size-h5);
+    font-family: 'Passero One', sans-serif;
+    color: var(--color-accent);
+}
+
+.mobile-navbar-links .navbar-link:hover,
+.mobile-navbar-links .navbar-link:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Subtle white background on hover */
+    color: var(--color-accent);
+    /* Ensure text remains white */
+    transform: none;
+    /* No lift effect inside the list */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 967px) {
+
+    /* Hide desktop links on smaller screens */
+    .navbar-links-desktop {
+        display: none;
+    }
+
+    /* Show hamburger button on smaller screens when menu is NOT open */
+    /* This rule works with the conditional rendering in JSX */
+    /* .navbar:not(.mobile-menu-overlay.open) .hamburger-menu-button { display: block; } */
+    /* The conditional rendering in JSX handles showing/hiding the hamburger itself */
+    /* but we still need to make sure its *display* property is set to block for small screens */
+    .hamburger-menu-button {
+        display: block;
+        /* Ensure it's block on small screens if rendered */
+    }
+
+    /* Hide hamburger button when menu is open on small screens */
+    /* The conditional rendering in JSX for `!isMenuOpen` already handles this. */
+    /* The CSS below is redundant IF JSX conditional rendering is primary. */
+    /* If you prefer CSS-only control: */
+    /* .mobile-menu-overlay.open + .hamburger-menu-button { display: none; } */
+    /* Or better, make the .hamburger-menu-button invisible only if the overlay is open */
+    /* Since we're conditionally rendering in JSX, this CSS is mainly for its initial state */
+}
+
+@media (min-width: 968px) {
+
+    /* Ensure mobile menu is hidden on larger screens */
+    .mobile-menu-overlay {
+        display: none;
+    }
+
+    /* Ensure hamburger button is hidden on larger screens */
+    .hamburger-menu-button {
+        display: none;
+    }
+}

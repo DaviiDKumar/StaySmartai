@@ -1,0 +1,70 @@
+/* styles/Posts.css */
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg); /* Use global spacing */
+    margin-top: var(--spacing-lg);
+}
+
+.post-item {
+    background-color: var(--color-light); /* Use a light background for cards */
+    padding: var(--spacing-lg);
+    border-radius: var(--spacing-sm); /* Rounded corners for cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Enhanced shadow */
+}
+
+.post-item h2 {
+    font-size: var(--font-size-h4); /* Use h4 for post titles */
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-base); /* Base color for titles */
+    font-family: 'Alegreya SC', serif; /* Use a distinct font for post titles */
+}
+
+.post-item .post-date {
+    font-size: var(--font-size-xs); /* Use the global extra small font size */
+    color: var(--color-muted); /* Muted color for metadata */
+    margin-bottom: var(--spacing-md);
+}
+
+.post-item p {
+    font-size: var(--font-size-p); /* Use paragraph font size */
+    color: var(--color-text-primary);
+    flex-grow: 1; /* Allow paragraph to take available space */
+    margin-bottom: var(--spacing-md); /* Ensure space below paragraph */
+}
+
+.post-item .navbar-link {
+    align-self: flex-start; /* Align button to start */
+    margin-top: var(--spacing-md); /* Space above button */
+    /* Overriding some navbar-link styles for 'read more' context if needed */
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--spacing-xs);
+    font-family: 'Poppins', sans-serif; /* Simpler font for read more */
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.post-item .navbar-link:hover {
+    background-color: #0477dd; /* Darker accent on hover */
+    transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .post-list {
+        grid-template-columns: 1fr; /* Stack posts on smaller screens */
+    }
+}

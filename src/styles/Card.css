@@ -1,0 +1,48 @@
+
+
+
+
+/* ==========================
+   Benefit Card
+   ========================== */
+.benefit-card {
+    background-color: var(--color-bg-2);
+    padding: var(--spacing-md);
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    color: var(--color-text);
+}
+
+.benefit-card-text-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.benefit-card-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    border-bottom: 2px solid black;
+    margin-bottom: .1rem;
+      color: var(--color-text);
+}
+
+.benefit-card-title svg {
+
+    font-size: var(--font-size-h3);
+}
+
+.benefit-card h4 {
+     color: var(--color-text);
+}
+
+.benefit-card p {
+    font-size: var(--font-size-p);
+      color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
