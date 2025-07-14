@@ -1,8 +1,8 @@
 import HeroSection from "@/components/HeroSection";
 import CategoriesSection from "@/components/CategoriesSection";
-import BenefitsSection from "@/components/BenefitsSection";
+
 import Navbar from "@/components/Navbar";
-import AboutAISection from "@/components/AboutAISection";
+
 
 export const metadata = {
   title: "Home | Stay Smart AI",
@@ -23,7 +23,7 @@ export default function Home() {
       
       
         <CategoriesSection />
-         <AboutAISection /> 
+      
       </section>
     </main>
   );
