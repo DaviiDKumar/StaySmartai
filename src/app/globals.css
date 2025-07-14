@@ -65,7 +65,11 @@ body {
 
 /* === Hero Section === */
 .hero-wrapper {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   min-height: 100vh;
   background-image: url('/aii5.jpg');
   background-size: cover;
