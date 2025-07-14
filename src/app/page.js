@@ -13,18 +13,18 @@ export default function Home() {
   return (
     <main>
       {/* Hero section with full-screen background image */}
-      <div className="hero-wrapper">
+     
         <Navbar />
         <HeroSection />
-      </div>
+     
 
       {/* White/light background starts here */}
-      <section className="section">
+   
       
       
         <CategoriesSection />
       
-      </section>
+     
     </main>
   );
 }

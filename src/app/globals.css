@@ -65,17 +65,13 @@ body {
 
 /* === Hero Section === */
 .hero-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-
+  position: relative;
   min-height: 100vh;
   background-image: url('/aii5.jpg');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
- 
+  padding-top: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -167,7 +163,6 @@ b {
   font-family: 'Passero One', cursive;
   color: var(--color-accent);
 }
-
 
 /* Links */
 a {
