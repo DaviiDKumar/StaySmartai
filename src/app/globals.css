@@ -71,7 +71,7 @@ body {
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-  padding-top: 1rem;
+ 
 }
 
 @media (max-width: 768px) {
