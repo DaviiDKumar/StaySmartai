@@ -41,15 +41,15 @@ export default function AboutAISection() {
         </div>
 
         <p>
-          AI is being used in healthcare to detect diseases earlier, in agriculture to monitor crop health, in finance to detect fraud, and even in creative fields like music, writing, and design. It's accelerating research, optimizing logistics, and helping people live more efficiently.
+          AI is being used in healthcare to detect diseases earlier, in agriculture to monitor crop health, in finance to detect fraud, and even in creative fields like music, writing, and design. It&apos;s accelerating research, optimizing logistics, and helping people live more efficiently.
         </p>
 
         <p>
-          But with great power comes great responsibility. AI can inherit biases from data, impact privacy, and even lead to job displacement in certain sectors. That's why ethical AI development, transparency, and regulation are crucial to ensure it’s used for good.
+          But with great power comes great responsibility. AI can inherit biases from data, impact privacy, and even lead to job displacement in certain sectors. That&apos;s why ethical AI development, transparency, and regulation are crucial to ensure it’s used for good.
         </p>
 
         <p>
-          As AI continues to evolve, it holds incredible potential — not just to automate, but to collaborate with us and help solve humanity's toughest challenges. From climate modeling to personalized education, the possibilities are vast — and we’re just getting started.
+          As AI continues to evolve, it holds incredible potential — not just to automate, but to collaborate with us and help solve humanity&apos;s toughest challenges. From climate modeling to personalized education, the possibilities are vast — and we’re just getting started.
         </p>
 
         <div className="about-ai-links">
