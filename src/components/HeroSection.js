@@ -2,7 +2,6 @@
 "use client"; // This is crucial for client-side interactivity and Next.js Image component
 
 import Link from "next/link";
-import Image from "next/image"; // Import the Image component
 import '../styles/Hero.css'; // Import the dedicated CSS file
 
 const HeroSection = () => {

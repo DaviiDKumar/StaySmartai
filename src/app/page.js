@@ -12,16 +12,14 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
-      {/* Hero section with full-screen background image */}
      
+   
         <Navbar />
         <HeroSection />
      
 
-      {/* White/light background starts here */}
    
-      
-      
+   
         <CategoriesSection />
       
      
