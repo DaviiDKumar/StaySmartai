@@ -16,16 +16,9 @@
     position: sticky;
     top: 0;
     margin-bottom: 0 !important;
-    z-index: 2;
 }
 
-.navbar::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: black;
-    z-index: -1;
-}
+
 
 
 .navbar-title {
@@ -50,7 +43,6 @@
     font-size: var(--font-size-p);
     color: var(--color-text-light);
     /* Light white links on black navbar */
-
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--spacing-xs);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
@@ -260,3 +252,4 @@
         display: none;
     }
 }
+

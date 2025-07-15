@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import CategoriesSection from "@/components/CategoriesSection";
 
-import Navbar from "@/components/Navbar";
+
 
 
 export const metadata = {
@@ -11,18 +11,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
-     
-   
-       
-        <HeroSection />
-     
-
-   
-   
-        <CategoriesSection />
-      
-     
+    <main style={{ paddingTop: "0px", marginTop: "0px" }}>
+      <HeroSection />
+      <CategoriesSection />
     </main>
+
   );
 }
