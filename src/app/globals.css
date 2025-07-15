@@ -61,45 +61,10 @@ body {
   color: var(--color-text-primary);
   line-height: 1.6;
   scroll-behavior: smooth;
+  
 }
 
-/* === Hero Section === */
-.hero-wrapper {
-  position: relative;
-  min-height: 100vh;
-  background-image: url('/aii5.jpg');
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-  padding-top: 1rem;
-}
 
-@media (max-width: 768px) {
-  .hero-wrapper {
-    background-image: url('/aii6.jpg');
-    background-position: center bottom;
-  }
-}
-
-.hero-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 1;
-}
-
-.hero-wrapper>* {
-  position: relative;
-  z-index: 2;
-}
-
-/* === Section Wrapper === */
-.section {
-  background-color: var(--color-light);
-  color: var(--color-text-primary);
-  padding: var(--spacing-xs) var(--spacing-xs);
-}
 
 /* === Typography Styles === */
 
